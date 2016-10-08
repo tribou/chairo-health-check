@@ -1,0 +1,53 @@
+{
+  "name": "chairo-health-check",
+  "author": "tribou",
+  "version": "0.0.1",
+  "description": "A Chairo plugin that adds a health check action to expose basic service information",
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=6.4.0 <7",
+    "npm": ">=3.10.3 <4"
+  },
+  "homepage": "https://github.com/tribou/chairo-health-check#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tribou/chairo-health-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tribou/chairo-health-check/issues"
+  },
+  "keywords": [
+    "hapi",
+    "chairo",
+    "seneca",
+    "health"
+  ],
+  "dependencies": {
+    "chairo": "^2.2.1",
+    "hapi": "^15.1.1"
+  },
+  "peerDependencies": {
+    "chairo": "^2.2.1",
+    "hapi": "^15.1.1"
+  },
+  "scripts": {
+    "test": "lab -c -L -v -a code -t 97 -P '_test' lib"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "chalk-cli": "^3.0.0",
+    "code": "^4.0.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-config-tribou": "^1.8.3",
+    "eslint-plugin-flowtype": "^2.11.4",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-react": "^6.2.0",
+    "eslint-plugin-standard": "^2.0.0",
+    "lab": "^11.1.0"
+  }
+}
