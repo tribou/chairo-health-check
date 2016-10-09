@@ -1,7 +1,7 @@
 {
   "name": "chairo-health-check",
   "author": "tribou",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A Chairo plugin that adds a health check action to expose basic service information",
   "license": "Apache-2.0",
   "main": "lib/index.js",
