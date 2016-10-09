@@ -39,6 +39,25 @@ server.register([Chairo, HealthCheckPlugin], (error) => {
 })
 ```
 
+Example result:
+
+```json
+{
+  "info": {
+    "created": 1476044745024,
+    "started": 0,
+    "host": "mylaptop.local",
+    "port": 0,
+    "protocol": "http",
+    "id": "mylaptop.local:61289:iu32xidc",
+    "uri": "http://mylaptop.local"
+  },
+  "name": "my-seneca-service",
+  "ready": true,
+  "version": "1.0.0"
+}
+```
+
 #### Options
 
 The following configuration options are available:
