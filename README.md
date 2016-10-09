@@ -1,16 +1,26 @@
 # chairo-health-check
 
+[![npm version](https://badge.fury.io/js/chairo-health-check.svg)](https://badge.fury.io/js/chairo-health-check)
+[![Build Status](https://travis-ci.org/tribou/chairo-health-check.svg?branch=master)](https://travis-ci.org/tribou/chairo-health-check)
+[![Coverage Status](https://coveralls.io/repos/github/tribou/chairo-health-check/badge.svg?branch=master)](https://coveralls.io/github/tribou/chairo-health-check?branch=master)
+[![NSP Status](https://nodesecurity.io/orgs/tribou/projects/fc2fd7f1-5374-46d8-9f99-1cba3145e5aa/badge)](https://nodesecurity.io/orgs/tribou/projects/fc2fd7f1-5374-46d8-9f99-1cba3145e5aa)
+
 #### Usage
 
 ```js
 const Chairo = require('chairo')
 const HealthCheck = require('chairo-health-check')
-const { version } = require('./package.json')
+const { name, version } = require('./package.json')
 
 const HealthCheckPlugin = {
   register: HealthCheck,
   options: {
-    version,
+    name, // Optional. Default: $npm_package_name
+    version, // Optional. Default: $npm_package_version
+    action: {  // Optional. Default shown here
+      role: 'health',
+      cmd: 'check',
+    }
   },
 }
 
@@ -29,6 +39,8 @@ server.register([Chairo, HealthCheckPlugin], (error) => {
 
 #### Options
 
-The following registration options are available:
+The following configuration options are available:
 
-- `action` -
+- `name` - The name to be returned from the health check. Default: `process.env.npm_package_name`
+- `version` - The version to be returned from the health check. Default: `process.env.npm_package_version`
+- `action` - The pattern used to call the health check. Default: `{ role: 'health', cmd: 'check }`

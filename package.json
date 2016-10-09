@@ -23,19 +23,12 @@
     "seneca",
     "health"
   ],
-  "dependencies": {
-    "chairo": "^2.2.1",
-    "hapi": "^15.1.1",
-    "hoek": "^4.1.0"
-  },
-  "peerDependencies": {
-    "chairo": "^2.2.1",
-    "hapi": "^15.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^6.1.2",
-    "chalk-cli": "^3.0.0",
+    "chairo": "^2.2.1",
     "code": "^4.0.0",
+    "coveralls": "^2.11.14",
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-config-standard": "^6.0.0",
@@ -46,12 +39,14 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-standard": "^2.0.0",
+    "hapi": "^15.1.1",
     "lab": "^11.1.0",
     "nodemon": "^1.11.0"
   },
   "scripts": {
+    "cover": "npm test -- -s -r lcov | coveralls",
     "lint": "eslint --cache --ignore-path .gitignore .",
-    "test": "lab -c -L -v -a code -t 97 -P '_test' lib",
+    "test": "lab -c -L -v -a code -t 100 -P '_test' lib",
     "watch": "nodemon -x npm test"
   }
 }
