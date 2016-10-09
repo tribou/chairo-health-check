@@ -26,3 +26,9 @@ server.register([Chairo, HealthCheckPlugin], (error) => {
 
 })
 ```
+
+#### Options
+
+The following registration options are available:
+
+- `action` -

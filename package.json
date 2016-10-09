@@ -25,20 +25,18 @@
   ],
   "dependencies": {
     "chairo": "^2.2.1",
-    "hapi": "^15.1.1"
+    "hapi": "^15.1.1",
+    "hoek": "^4.1.0"
   },
   "peerDependencies": {
     "chairo": "^2.2.1",
     "hapi": "^15.1.1"
   },
-  "scripts": {
-    "test": "lab -c -L -v -a code -t 97 -P '_test' lib"
-  },
   "devDependencies": {
     "babel-eslint": "^6.1.2",
     "chalk-cli": "^3.0.0",
     "code": "^4.0.0",
-    "eslint": "^3.4.0",
+    "eslint": "^3.7.1",
     "eslint-config-airbnb": "^10.0.1",
     "eslint-config-standard": "^6.0.0",
     "eslint-config-tribou": "^1.8.3",
@@ -48,6 +46,12 @@
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-react": "^6.2.0",
     "eslint-plugin-standard": "^2.0.0",
-    "lab": "^11.1.0"
+    "lab": "^11.1.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "lint": "eslint --cache --ignore-path .gitignore .",
+    "test": "lab -c -L -v -a code -t 97 -P '_test' lib",
+    "watch": "nodemon -x npm test"
   }
 }
