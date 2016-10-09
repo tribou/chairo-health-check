@@ -5,6 +5,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/tribou/chairo-health-check/badge.svg?branch=master)](https://coveralls.io/github/tribou/chairo-health-check?branch=master)
 [![NSP Status](https://nodesecurity.io/orgs/tribou/projects/fc2fd7f1-5374-46d8-9f99-1cba3145e5aa/badge)](https://nodesecurity.io/orgs/tribou/projects/fc2fd7f1-5374-46d8-9f99-1cba3145e5aa)
 
+Add a simple health check to your `chairo`/`seneca` service. Includes the ability to check which version of your service is running.
+
 #### Usage
 
 ```js
