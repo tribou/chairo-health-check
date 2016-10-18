@@ -22,7 +22,8 @@ const HealthCheckPlugin = {
     action: {  // Optional. Default shown here
       role: 'health',
       cmd: 'check',
-    }
+    },
+    promise: Promise.resolve('testing'),
   },
 }
 
@@ -54,7 +55,8 @@ Example result:
   },
   "name": "my-seneca-service",
   "ready": true,
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "promise": "testing"
 }
 ```
 
@@ -65,3 +67,4 @@ The following configuration options are available:
 - `name` - The name to be returned from the health check. Default: `process.env.npm_package_name`
 - `version` - The version to be returned from the health check. Default: `process.env.npm_package_version`
 - `action` - The pattern used to call the health check. Default: `{ role: 'health', cmd: 'check }`
+- `promise` - A promise to be resolved and the returned value added to a `promise` property on the result message.
